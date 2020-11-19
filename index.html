@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPW - Verify client IPs using any http method</title>
+  <meta name="description" content="IP Watcher its a simple API that returns the client's IP while using any http method. GET, POST, PUT, PATCH, or DELETE. Very useful to verify IPs when using proxies or VPNs.">
+  <style>
+    body {
+      margin: 5rem;
+      font-family: sans-serif;
+      max-width: 600px;
+    }
+    .bkn-brand {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin: 2rem 0 1rem;
+      letter-spacing: -3px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      letter-spacing: -1px;
+    }
+    h3 {
+      font-size: 1.4;
+      font-weight: 600;
+    }
+    p, blockquote {
+      line-height: 1.6;
+      margin: 1rem 0 1.5rem;
+    }
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+      border-radius: 10px;
+      font-style: italic;
+      color: #444;
+    }
+    code {
+      margin: 1rem 0 1.5rem;
+      padding: 0.2rem 1.5rem;
+      background-color: #eee;
+      font-size: 14px;
+      line-height: 1.5;
+      border-radius: 10px;
+      overflow-x: scroll;
+    }
+    .block {
+      display: block;
+    }
+    .inline {
+      display: flex;
+    }
+    .inline > span {
+      margin-right: 0.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        margin: 2rem;
+      }
+      h1 {
+        font-size: 3.2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+  <section>
+    <h1>IPW</h1>
+    <p>IP Watcher its a simple API that returns the client's IP while using any http method. <b>GET</b>, <b>POST</b>, <b>PUT</b>, <b>PATCH</b>, or <b>DELETE</b>. Very useful to verify IPs when using proxies or VPNs.</p>
+
+    <div class="inline">
+      <a class="github-button" href="https://github.com/juanpujol/ipw" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Open on Github">Github</a>
+      <a class="github-button" href="https://github.com/juanpujol" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @juanpujol on GitHub">Follow @juanpujol</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Deploy with Vercel</h2>
+
+    <p>This requires a free account on <a href="https://vercel.com/" target="_blank" rel="noopener">https://vercel.com/</a></p>
+
+    <p>
+      <a href="https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fjuanpujol%2Fipw&project-name=ipw&repository-name=ipw" target="_blank" rel="noopener">
+        <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
+      </a>
+    </p>
+
+    <i style="color: #666;">*No Environment Variables required.</i>
+  </section>
+
+  <section>
+    <h2>How to Use</h2>
+    <p>Just request the endpoint with <b>/api</b> using any method, and it will return a <b>JSON</b> object with the origin IP.</p>
+
+    <p>Try it now with <b>GET</b>: <a href="https://ipw.qtal.pro/api" target="_blank" rel="noopener">https://ipw.qtal.pro/api</a></p>
+
+    <p>Or use <b>curl</b> to try other methods.</p>
+
+<code class="block">
+<pre>
+curl --request GET https://ipw.qtal.pro/api
+curl --request POST https://ipw.qtal.pro/api
+curl --request PUT https://ipw.qtal.pro/api
+curl --request PATCH https://ipw.qtal.pro/api
+curl --request DELETE https://ipw.qtal.pro/api
+curl --request OPTIONS https://ipw.qtal.pro/api
+</pre>
+</code>
+
+    <h3>Return as text or XML</h3>
+
+    <p>By default the API returns <b>JSON</b>. If you want to return text or XML, simply pass the query string <i>?f={format}</i>.</p>
+
+    <p>Like this: <a href="https://ipw.qtal.pro/api?f=text" target="_blank" rel="noopener">https://ipw.qtal.pro/api?f=text</a> or <a href="https://ipw.qtal.pro/api?f=xml" target="_blank" rel="noopener">https://ipw.qtal.pro/api?f=xml</a></p>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+
+    <p>I built this solution because I needed a way to verify the client IP when doing requests as POST and PUT. And also, I like building stuff for fun, this is not intended to become a highly demanded project.</p>
+    <p>So, if you need to check client IPs using only GET, and you need that solution to scale to a huge level, I will recommend using https://www.ipify.org/. It's free, open-source, awesome, and like they say on their website:</p>
+    <blockquote>"You can use it without limit (even if you're doing millions of requests per minute."</blockquote>
+    <p>That's a really good deal!</p>
+    <p>Thanks for reading until the end, here, have a ❤️.</p>
+  </section>
+</body>
+</html>

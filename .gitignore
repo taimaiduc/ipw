@@ -1,0 +1,10 @@
+node_modules
+.serverless
+.idea
+.env
+.build
+package-lock.json
+yarn-error.log
+.DS_Store
+NOTES.md
+.vercel

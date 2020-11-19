@@ -1,0 +1,28 @@
+{
+  "name": "ipw",
+  "version": "0.1.0",
+  "description": "An IP that returns the client IP on any method. GET, POST, PUT, PATCH or DELETE. Deploy directly to Vercel.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanpujol/ipw"
+  },
+  "author": {
+    "name": "Juan Pujol",
+    "email": "contact@juanpujol.com"
+  },
+  "scripts": {
+    "dev": "vc dev"
+  },
+  "keywords": [
+    "ip",
+    "vercel",
+    "proxy",
+    "vpn"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/node": "1.7.4",
+    "request-ip": "2.1.3"
+  }
+}
